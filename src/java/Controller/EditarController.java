@@ -81,21 +81,22 @@ public class EditarController
     public Estudiantes selectUsuario(int id) 
     {
         final Estudiantes user = new Estudiantes();
-        String quer = "SELECT * FROM usuarios WHERE id='" + id+"'";
+        String quer = "SELECT * FROM table_estudiantes WHERE id_estudiante='" + id+"'";
         return (Estudiantes) jdbcTemplate.query
         (quer, new ResultSetExtractor<Estudiantes>() 
             {
                 public Estudiantes extractData(ResultSet rs) throws SQLException, DataAccessException {
                     if (rs.next()) {
                         user.setNombres(rs.getString("nombre"));
+                        user.setApellidos(rs.getString("apellidos"));
                         user.setCorreo(rs.getString("correo"));
-                        user.setTelefonos(rs.getString("telefono"));
+                        user.setCodigo_carnet(rs.getInt("codigo_carnet"));
+                        user.setId_nivel_estudio(rs.getInt("id_nivel_estudio"));
                     }
                     return user;
                 }
 
-
-            }
+          }
         );
     }
 }
