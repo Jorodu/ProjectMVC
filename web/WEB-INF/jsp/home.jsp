@@ -17,7 +17,7 @@
                 <table class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>Cedula/th>
+                            <th>Cedula</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Correo</th>
@@ -35,7 +35,7 @@
                                 <td><c:out value="${dato.codigo_carnet}" /></td>
                                 <td><c:out value="${dato.id_nivel_estudio}" /></td>
                                 <td>
-                                    <a href="<c:url value="edit.htm?id=${dato.id_estudiante}" />">Editar</a>
+                                    <a href="<c:url value="editar.htm?id=${dato.id_estudiante}" />">Editar</a>
                                     <a href="<c:url value="eliminar.htm?id=${dato.id_estudiante}" />">Eliminar</a>
                                 </td>
                             </tr>

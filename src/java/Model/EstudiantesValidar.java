@@ -30,8 +30,8 @@ public class EstudiantesValidar implements Validator{
 
     @Override
     public void validate(Object o, Errors errors) {
-        Estudiantes usuarios=(Estudiantes)o;
-         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nombre",
+        /*Estudiantes usuarios=(Estudiantes)o;
+         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nombres",
         "required.nombre", "El campo Nombre es Obligatorio.");
          ValidationUtils.rejectIfEmptyOrWhitespace(errors, "correo",
         "required.correo", "El campo Correo electrónico es Obligatorio.");
@@ -44,8 +44,8 @@ public class EstudiantesValidar implements Validator{
                 errors.rejectValue("correo", "correo.incorrect",
                   "El Correo electrónico "+usuarios.getCorreo()+" no es válido");
                }
-        }
-         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "telefono",
-        "required.telefono", "El campo Teléfono es Obligatorio.");
+        }*/
+        // ValidationUtils.rejectIfEmptyOrWhitespace(errors, "telefonos",
+        //"required.telefono", "El campo Teléfono es Obligatorio.");
     }
 }

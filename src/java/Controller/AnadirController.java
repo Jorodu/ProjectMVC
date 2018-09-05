@@ -52,11 +52,10 @@ public class AnadirController {
         {
         this.jdbcTemplate.update
         (
-        "insert into table_estudiante (id_estudiante,nombres,apellidos correo,codigo_carnet,id_nivel_estudio) values (?,?,?,?,?,?)",
-         u.getId_estudiante(),u.getNombres(),u.getApellidos(),u.getCorreo(),u.getCodigo_carnet(),u.getId_nivel_estudio()
+        "insert into table_estudiante (id_estudiante,nombres,apellidos,correo,codigo_carnet,id_nivel_estudio) values (?,?,?,?,?,?)",
+         u.getId_estudiante(),u.getNombres(),u.getApellidos(),u.getCorreo().toString(),u.getCodigo_carnet(),u.getId_nivel_estudio()
         );
          return new ModelAndView("redirect:/home.htm");
         }
-       
     }
 }

@@ -40,7 +40,7 @@ public class EditarController
         int id_estudiante=Integer.parseInt(request.getParameter("id_estudiante"));
         Estudiantes datos=this.selectUsuario(id_estudiante);
         mav.setViewName("editar");
-        mav.addObject("estudiantes",new Estudiantes(id_estudiante,datos.getNombres(),datos.getApellidos(),datos.getCorreo(),datos.getCodigo_carnet(),datos.getId_nivel_estudio()));
+        mav.addObject("estudiantes",new Estudiantes(id_estudiante,datos.getNombres(),datos.getApellidos(),datos.getCorreo().toString(),datos.getCodigo_carnet(),datos.getId_nivel_estudio()));
         return mav;
     }
     @RequestMapping(method=RequestMethod.POST)

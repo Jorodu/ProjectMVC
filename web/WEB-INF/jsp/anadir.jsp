@@ -18,28 +18,41 @@
                 <div class="panel-heading">Formulario</div>
                 <div class="panel-body">
                    
-                        <form:form method="post" commandName="usuarios">
+                        <form:form method="post" commandName="estudiantes">
                             <h1>Complete el formulario</h1>
                             
                             <form:errors path="*" element="div" cssClass="alert alert-danger" />
                             
                             <p>
-                                <form:label path="nombre">Nombre:</form:label>
-                                <form:input path="nombre" cssClass="form-control" />
+                                <form:label path="id_estudiante">ID_Estudiante:</form:label>
+                                <form:input path="id_estudiante" cssClass="form-control" />
                                 
                             </p>
-                            
+                            <p>
+                                <form:label path="nombres">Nombre:</form:label>
+                                <form:input path="nombres" cssClass="form-control" />
+                                
+                            </p>
+                            <p>
+                                <form:label path="apellidos">Apellidos</form:label>
+                                <form:input path="apellidos" cssClass="form-control" />
+                                
+                            </p>
                             <p>
                                 <form:label path="correo">Correo electrónico</form:label>
                                 <form:input path="correo" cssClass="form-control" />
                             </p>
                             
                             <p>
-                                <form:label path="telefono">Teléfono</form:label>
-                                <form:input path="telefono" cssClass="form-control" />
+                                <form:label path="codigo_carnet">Teléfono</form:label>
+                                <form:input path="codigo_carnet" cssClass="form-control" />
+                            </p>
+                           <p>
+                                <form:label path="id_nivel_estudio">Nivel Esudio</form:label>
+                                <form:input path="id_nivel_estudio" cssClass="form-control" />
                             </p>
                             <hr />
-                            <input type="submit" value="Enviar" class="btn btn-danger" />
+                            <input type="submit" value="Enviar datosx" class="btn btn-danger" />
                         </form:form>
                 </div>
             </div>

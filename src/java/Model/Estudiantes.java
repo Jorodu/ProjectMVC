@@ -3,7 +3,7 @@ package Model;
 
 
 public class Estudiantes {
-    private int id_estudiante, codigo_carnet, id_nivel_estudio;
+    private int id_estudiante, codigo_carnet,id_nivel_estudio;
     private String nombres,apellidos,correo;
 
     public Estudiantes() {
